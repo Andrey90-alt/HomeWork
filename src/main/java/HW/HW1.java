@@ -1,8 +1,5 @@
 package HW;
 
-import com.sun.source.tree.IfTree;
-
-import java.io.PrintStream;
 
 public class HW1 {
     public static void main(String[] args) {
@@ -51,3 +48,5 @@ public class HW1 {
         }
     }
 }
+
+
