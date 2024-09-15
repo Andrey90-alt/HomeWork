@@ -1,8 +1,8 @@
-package HW;
+package hw;
 
 import java.util.Arrays;
 
-public class HW2 {
+public class hw2 {
     public static void main(String[] args){
         printMess(5, "1");
         sumFive(new int[]{1, 5, 6, 8});

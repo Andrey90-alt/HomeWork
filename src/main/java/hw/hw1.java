@@ -1,7 +1,7 @@
-package HW;
+package hw;
 
 
-public class HW1 {
+public class hw1 {
     public static void main(String[] args) {
         greetings();
         checkSign(0,0,0);
