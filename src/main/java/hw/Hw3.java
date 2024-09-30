@@ -2,16 +2,16 @@ package hw;
 
 import java.util.Arrays;
 
-public class hw3 {
+public class Hw3 {
     public static void main(String[] args) {
         sumOfPositiveElements(new int[][]{{1, 2, -100}, {1, -100, -100}});
         intSize(new int[5]);
         zeroDiag(new int[][]{{1, 2, 3}, {1, 2, 3}});
         findMax(new int[][]{{-100, 8, 6}, {100, 2, 299}});
-        secondRow(new int[][]{{-100, 8, 6}, {}});
+        secondRow(new int[][]{{-100, 8, 6}, {-8,2}});
     }
 
-    static void sumOfPositiveElements(int arr[][]) {
+    static int sumOfPositiveElements(int[][] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
@@ -22,6 +22,7 @@ public class hw3 {
             }
         }
         System.out.println(sum);
+        return sum;
     }
 
     static void intSize(int size[]) {
@@ -39,7 +40,7 @@ public class hw3 {
 
     }
 
-    static void zeroDiag(int arr[][]) {
+    static int[][] zeroDiag(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 if (i == j && arr[i][j] != 0) {
@@ -50,10 +51,11 @@ public class hw3 {
         }
         System.out.println();
         System.out.println(Arrays.deepToString(arr));
+        return arr;
 
     }
 
-    static void findMax(int arr[][]) {
+    static int findMax(int[][] arr) {
         int max = arr[0][0];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
@@ -65,24 +67,35 @@ public class hw3 {
 
         }
         System.out.println(max);
+        return max;
     }
 
-    static void secondRow(int arr[][]) {
+    static int secondRow(int[][] arr) {
         int sum = 0;
         for (int i = 1; i == 1; i++) {
+            if(arr[i].length == 0){
+                sum=-1;
+                return sum;
+
+            }
+            if(arr[i].length != arr[0].length){
+
+                System.out.println("Введите корректные значения. Строки должны совпадать");
+                return sum;
+            }
             for (int j = 0; j <= 2; j++) {
-                if(arr[i].length == 0){
-                    System.out.println(-1);
-                    break;
-                }
+
+
                 sum += arr[i][j];
             }
             if(arr[i].length != 0){
                 System.out.println(sum);
+                return sum;
 
         }
 
     }
 
-}}
+        return sum;
+    }}
 

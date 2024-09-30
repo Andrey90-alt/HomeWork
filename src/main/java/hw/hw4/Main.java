@@ -1,12 +1,21 @@
 package hw.hw4;
 
-import java.util.Arrays;
 
-public class Main extends User {
+
+public class Main {
     static int curYear = 2024;
+    public String secondName;
+    public String firstName;
+    public String patronim;
+    int dateOfBirth;
+    String eMail;
 
     public Main(String secondName, String firstName, String patronim, int dateOfBirth, String eMail) {
-        super(secondName, firstName, patronim, dateOfBirth, eMail);
+        this.secondName=secondName;
+        this.firstName=firstName;
+        this.patronim=patronim;
+        this.dateOfBirth=dateOfBirth;
+        this.eMail=eMail;
     }
 
     public static void main(String[] args) {

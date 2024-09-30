@@ -2,10 +2,16 @@ package hw.hw7;
 
 import java.util.Scanner;
 
-public class Truk implements Move{
+public class Truk extends Human implements Move, Passability{
     @Override
     public boolean move() {
         Scanner in = new Scanner(System.in);
+        Truk truk = new Truk();
+        System.out.println(" Введите местность (лес, равнина, болото)(по умолчанию - равнина)");
+        if (!truk.pass(in.nextLine())){
+            System.out.println(" Перемещение невозможно ");
+            return false;
+        }
         System.out.println(" Введите кол-во топлива  ");
         int energy = in.nextInt();
         System.out.println(" Введите дистанцию.  ");
@@ -20,5 +26,10 @@ public class Truk implements Move{
 
         }
 
+
+    }
+    @Override
+    public boolean pass(String ground) {
+        return true;
     }
 }

@@ -1,10 +1,10 @@
 package hw.hw6;
 
 public class Plate {
-    static int maxFood;
-    public static int curFood;
+     int maxFood;
+     int curFood;
 
-    public static void fillFood(int moreFood){
+    public void fillFood(int moreFood){
         curFood += moreFood;
         if (curFood>maxFood){
             curFood=maxFood;

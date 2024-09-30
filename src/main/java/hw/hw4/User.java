@@ -8,9 +8,7 @@ public class User {
     public String patronim;
     int dateOfBirth;
     String eMail;
-    public String getSecondNameName() {
-        return secondName;
-    }
+
     public User(String secondName,String firstName, String patronim, int dateOfBirth, String eMail ){
         this.secondName=secondName;
         this.firstName=firstName;

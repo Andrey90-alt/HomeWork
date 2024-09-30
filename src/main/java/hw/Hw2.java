@@ -2,7 +2,7 @@ package hw;
 
 import java.util.Arrays;
 
-public class hw2 {
+public class Hw2 {
     public static void main(String[] args){
         printMess(5, "1");
         sumFive(new int[]{1, 5, 6, 8});
