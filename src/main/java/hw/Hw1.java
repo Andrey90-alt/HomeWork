@@ -1,16 +1,13 @@
-package HW;
+package hw;
 
-import com.sun.source.tree.IfTree;
 
-import java.io.PrintStream;
-
-public class HW1 {
+public class Hw1 {
     public static void main(String[] args) {
         greetings();
         checkSign(0,0,0);
         selectColor(11);
         compareNumbers(1,2);
-        addOrSubtractAndPrint(1,2,true);
+        addOrSubtractAndPrint(1,2,false);
     }
     static void greetings() {
         System.out.println("Hello");
@@ -26,11 +23,11 @@ public class HW1 {
         }
     }
     static void selectColor(int data){
-        if (data<10){
+        if (data<=10){
             System.out.println("Красный");
-        } else if (data>10 && data<20 ) {
+        } else if (data<=20) {
             System.out.println("Желтый");
-        } else if (data>20) {
+        } else {
             System.out.println("Зеленый");
         }
     }
@@ -42,7 +39,7 @@ public class HW1 {
         }
     }
     static void addOrSubtractAndPrint(int initValue, int delta, boolean increment){
-        if (increment = true){
+        if (!increment){
             int result = initValue + delta;
             System.out.println(result);
         }else {
@@ -51,3 +48,5 @@ public class HW1 {
         }
     }
 }
+
+
