@@ -27,17 +27,17 @@ public class DoubleArr {
             }
         });
         Thread t2 = new Thread(() -> {
-            for (int i = 25000000; i >= 25000000 && i < 50000000; i++){
+            for (int i = 25000000; i < 50000000; i++){
                 array[i] = 1.14 * Math.cos(i) * Math.sin(i * 0.2) * Math.cos(i / 1.2);
             }
         });
         Thread t3 = new Thread(() -> {
-            for (int i = 50000000; i >= 50000000 && i < 75000000;i++){
+            for (int i = 50000000; i < 75000000;i++){
                 array[i] = 1.14 * Math.cos(i) * Math.sin(i * 0.2) * Math.cos(i / 1.2);
             }
         });
         Thread t4 = new Thread(() -> {
-            for (int i = 75000000; i >= 75000000 && i < array.length;i++){
+            for (int i = 75000000; i < array.length;i++){
                 array[i] = 1.14 * Math.cos(i) * Math.sin(i * 0.2) * Math.cos(i / 1.2);
             }
         });
